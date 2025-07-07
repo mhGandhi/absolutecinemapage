@@ -12,11 +12,14 @@
 		<meta name="keywords" content="Cinema, Game, Simulator, Absolute Cinema, Lennadi">
 		<meta name="author" content="Egon Eiermann">
 		
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+		
 		<base href="https://absolutecinema.net">
 
 		<style>
 			:root{
 				--secondary-color: crimson;
+				--secondary-writing: black;
 				--body-background: white;
 				--body-writing: black;
 				--devlog-background: gray;
@@ -79,14 +82,36 @@
 			
 			header{
 				background-color: var(--secondary-color);
+				color: var(--secondary-writing);
+				position: sticky;
+				top: 0;
+				z-index: 1000;
 			}
 			.header-content{
 				margin:1rem;
 				flex-wrap: wrap;
+				display:flex;
+				flex-direction:row;
+				gap: 1rem;
+				justify-content:space-evenly;
 			}
 			.header-content > h1{
 				font-size: 2rem;
 				margin: 0.2rem;
+			}
+			.header-content > .socials-container{
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				gap: 0.3rem;
+			}
+			.header-content > .socials-container > a > .bx{
+				font-size: 2rem;
+				color: var(--secondary-writing);
+			}
+			.header-content > .socials-container > a > .bx:hover{
+				transform: scale(1.2);
+				transition: transform 0.4s ease-in-out;
 			}
 			
 			
@@ -171,6 +196,7 @@
 			
 			footer{
 				background-color: var(--secondary-color);
+				color: var(--secondary-writing);
 			}
 			.footer-content{
 				margin: 1rem;
@@ -184,6 +210,11 @@
 		<header>
 			<div class="header-content">
 				<h1>ABSOLUTE CINEMA</h1>
+				<div class="socials-container">
+					<a href="https://www.tiktok.com/@absolutecinemagame" target="_blank"><i class='bx bxl-tiktok'></i></a>
+					<a href="https://www.youtube.com/@absolutecinemagame" target="_blank"><i class='bx bxl-youtube'></i></a>
+					<a href="https://www.instagram.com/absolutecinemagame/" target="_blank"><i class='bx bxl-instagram'></i></a>
+				</div>
 			</div>
 		</header>
 		<div class="page-body">
@@ -204,10 +235,10 @@
 			<section>
 				<h1>Early Access</h1>
 				<div class="early-access">
-					<p>Blabla bla. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat: <a href="mailto:early-access@absolutecinema.net">early-access@absolutecinema.net</a>, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+					<p>Blabla bla. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat: <a style="white-space:nowrap;" href="mailto:early-access@absolutecinema.net">early-access@absolutecinema.net</a>, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
 					<div>
 						<form>
-							<span>Early Access Application</span>
+							<span>Early Access Application (WIP)</span>
 							<textarea class="form-emailfield" placeholder="EMAIL"></textarea>
 							<textarea class="form-messagefield" placeholder="MESSAGE"></textarea>
 							<button>Send</button>
@@ -289,11 +320,17 @@
 			<div class="footer-content dflex-row">
 				<div>
 					<form>
-						<span>Contact Us</span>
+						<span>Contact Us (WIP)</span>
 						<textarea class="form-emailfield" placeholder="EMAIL"></textarea>
 						<textarea class="form-messagefield" placeholder="MESSAGE"></textarea>
 						<button>Send</button>
 					</form>
+					
+					<p>
+						<a href="mailto:contact@absolutecinema.net">contact@absolutecinema.net</a><br>
+						<a href="mailto:feedback@absolutecinema.net">feedback@absolutecinema.net</a><br>
+						<a style="white-space:nowrap;" href="mailto:early-access@absolutecinema.net">early-access@absolutecinema.net</a>
+					</p>
 				</div>
 				
 				<div>
