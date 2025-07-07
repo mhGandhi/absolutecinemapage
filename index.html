@@ -4,6 +4,8 @@
 		<title>ABSOLUTE CINEMA</title>
 		<link rel="icon" href="./derhs.ico">
 		
+		<base href="https://absolutecinema.net" />
+		
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<meta name="description" content="Absolute Cinema official page!">
@@ -40,10 +42,22 @@
 				display:flex;
 				flex-direction:row;
 			}
+			.show-on-mobile{
+				display: none;
+			 }
+			 .show-on-desktop{
+				display: block;
+			 }
 			@media (max-width: 720px) {
 			  .dflex-row {
 				flex-direction: column;
 				flex-wrap: nowrap;
+			  }
+			  .show-on-mobile{
+				display: block;
+			  }
+			  .show-on-desktop{
+				display: none;
 			  }
 			}
 			
@@ -96,6 +110,7 @@
 				justify-content: space-evenly;
 				gap: 1rem;
 				flex-wrap: wrap;
+				overflow-x: scroll;
 			}
 			.our-pages > div:hover{
 				/*transform: scale(1.05);
@@ -148,7 +163,9 @@
 			}
 			
 			#devlog-loadmore-btn{
-
+				border: none;
+				background: inherit;
+				color: blue;
 			}
 
 			
@@ -285,7 +302,7 @@
 				</div>
 				
 				<div>
-					<span>Impressum (WIP)</span>
+					<span>Impressum (placeholder)</span>
 					<p>Egon Eiermann<br>Eierweg 35<br>12332 Eierdorf<br>Deutschland<br><a href="mailto:egon@eiermann.de">egon@eiermann.de</a></p>
 				</div>
 			</div>
