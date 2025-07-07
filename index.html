@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ABSOLUTE CINEMA</title>
+		<link rel="icon" href="./derhs.ico">
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="Absolute Cinema official page!">
+		<meta name="keywords" content="Cinema, Game, Simulator, Absolute Cinema, Lennadi">
+		<meta name="author" content="Egon Eiermann">
+		
+		<base href="https://absolutecinema.net">
+
+		<style>
+			:root{
+				--secondary-color: crimson;
+				--body-background: white;
+				--body-writing: black;
+				--devlog-background: gray;
+				--devlog-writing: black;
+				
+				--border-rad: 0.3rem;
+			}
+		
+			* {
+			  box-sizing: border-box;
+			}
+			body{
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+			
+			form{
+				display: flex;
+				flex-direction:column;
+			}
+			form > .form-emailfield{
+				height: 1.5rem;
+				resize: none;
+				min-width: 20rem;
+			}
+			form > .form-messagefield{
+				/*resize: vertical;*/
+				resize: none;
+				min-height:5rem;
+			}
+			
+			
+			header{
+				background-color: var(--secondary-color);
+			}
+			.header-content{
+				margin:1rem;
+			}
+			.header-content > h1{
+				font-size: 2rem;
+				margin: 0.2rem;
+			}
+			
+			
+			.page-body{
+				flex: 1;
+				display:block;
+				overflow: hidden;
+				background-color: var(--body-background);
+				color: var(--body-writing);
+			}
+			.page-body > section{
+				border: 0px solid red;
+				margin: 1rem;
+			}
+			section > h1{
+				font-size: 1.5rem;
+			}
+			
+			.our-pages{
+				display:flex;
+				flex-direction:row;
+				justify-content: space-evenly;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+			.our-pages > div:hover{
+				/*transform: scale(1.05);
+				transition: transform 0.4s ease-in-out;*/
+			}
+			.early-access{
+				display:flex;
+				flex-direction:row;
+				justify-content: space-evenly;
+				gap: 1rem;
+			}
+			
+			#devlog-entries {
+			  list-style: none;
+			  padding: 0;
+			  margin: 0;
+			  display: flex;
+			  flex-direction: column;
+			  gap: 1.5rem;
+			}
+			#devlog-entries > li {
+			  padding: 1rem;
+			  background-color: var(--devlog-background);
+			  color: var(--devlog-writing);
+			  border-radius: var(--border-rad);
+			  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+			}
+			#devlog-entries li .devlog-title {
+			  margin: 0 0 0.25rem 0;
+			  font-size: 1.2rem;
+			}
+			#devlog-entries li .devlog-date {
+			  font-size: 0.85rem;
+			  opacity: 0.8;
+			}
+			#devlog-entries li .devlog-content {
+			  margin: 0.5rem 0 0 0;
+			}
+			#devlog-entries li .devlog-number {
+			  font-weight: bold;
+			  margin-right: 0.5rem;
+			}
+			#devlog-entries li .devlog-number::before {
+			  content: "#";
+			  margin-right: 0.25rem;
+			}
+			
+			#devlog-loadmore-btn{
+
+			}
+
+			
+			footer{
+				background-color: var(--secondary-color);
+			}
+			.footer-content{
+				margin: 1rem;
+				display:flex;
+				flex-direction:row;
+				justify-content: space-evenly;
+				gap: 1rem;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header-content">
+				<h1>ABSOLUTE CINEMA</h1>
+			</div>
+		</header>
+		<div class="page-body">
+			
+			<section>
+				<h1>About the Game</h1>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+			</section>
+			
+			<section>
+				<h1>Our Pages</h1>
+				<div class="our-pages">
+					<div><iframe frameborder="0" src="https://itch.io/embed/3638717" width="552" height="167"><a href="https://lennadi.itch.io/absolute-cinema">Absolute Cinema on itch.io</a></iframe></div>
+					<div><iframe src="https://store.steampowered.com/widget/439800" width="646" height="190" frameborder="0"><a href="https://lennadi.itch.io/absolute-cinema">Absolute Cinema on Steam</a></iframe></div>
+				</div>
+			<section>
+			
+			<section>
+				<h1>Early Access</h1>
+				<div class="early-access">
+					<p>Blabla bla. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat: <a href="mailto:early-access@absolutecinema.net">early-access@absolutecinema.net</a>, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+					<div>
+						<form>
+							<span>Early Access Application</span>
+							<textarea class="form-emailfield" placeholder="EMAIL"></textarea>
+							<textarea class="form-messagefield" placeholder="MESSAGE"></textarea>
+							<button>Send</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<h1>Devlog</h1>
+				<noscript>
+				  <p>JavaScript is disabled. View the devlog entries <a href="devlog/index.html">here</a>.</p>
+				</noscript>
+
+				<ul id="devlog-entries">
+					
+				</ul>
+				<button id="devlog-loadmore-btn" style="display:none;">Load More...</button>
+				<script>
+					const container = document.getElementById("devlog-entries");
+					const loadMoreBtn = document.getElementById("devlog-loadmore-btn");
+					const cacheBuster = `?t=${Date.now()}`;
+
+					let entryLinks = [];
+					let currentIndex = 0;
+					const BATCH_SIZE = 3;
+
+					function loadNextBatch() {
+					  const batch = entryLinks.slice(currentIndex, currentIndex + BATCH_SIZE);
+
+					  batch.forEach(link => {
+						const file = link.getAttribute("href");
+
+						fetch(`devlog/${file}${cacheBuster}`)
+						  .then(res => {
+							if (false) throw new Error(`404 for ${file}`);//todo change condition to !res.ok to hide unresolved devlogs
+							return res.text();
+						  })
+						  .then(entryHtml => {
+							const li = document.createElement("li");
+							li.innerHTML = entryHtml;
+							container.appendChild(li);
+						  })
+						  .catch(err => {
+							console.warn("Devlog skipped:", err.message);
+						  });
+					  });
+
+					  currentIndex += BATCH_SIZE;
+
+					  if (currentIndex >= entryLinks.length) {
+						loadMoreBtn.style.display = "none";
+					  }
+					}
+
+					fetch(`devlog/index.html${cacheBuster}`)
+					  .then(res => res.text())
+					  .then(indexHtml => {
+						const temp = document.createElement("div");
+						temp.innerHTML = indexHtml;
+
+						entryLinks = Array.from(temp.querySelectorAll("a")).reverse(); // newest first
+
+						if (entryLinks.length > 0) {
+						  loadNextBatch();
+						}
+
+						if (entryLinks.length > BATCH_SIZE) {
+						  loadMoreBtn.style.display = "block";
+						}
+					  });
+
+					loadMoreBtn.addEventListener("click", loadNextBatch);
+				</script>
+			</section>
+			
+		</div>
+		<footer>
+			<div class="footer-content">
+				<div>
+					<form>
+						<span>Contact Us</span>
+						<textarea class="form-emailfield" placeholder="EMAIL"></textarea>
+						<textarea class="form-messagefield" placeholder="MESSAGE"></textarea>
+						<button>Send</button>
+					</form>
+				</div>
+				
+				<div>
+					<span>Privacy</span>
+					<p>Nothing is stored. Using Cloudflare. 3rd parties (itch and steam widged) may use cookies. Email Adress used and kept exclusively to reply to inquiries.</p>
+				</div>
+				
+				<div>
+					<span>Impressum (WIP)</span>
+					<p>Egon Eiermann<br>Eierweg 35<br>12332 Eierdorf<br>Deutschland<br><a href="mailto:egon@eiermann.de">egon@eiermann.de</a></p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
