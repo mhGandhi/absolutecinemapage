@@ -21,6 +21,8 @@
 				--devlog-writing: black;
 				
 				--border-rad: 0.3rem;
+				
+				--small-screen-max: 600px;
 			}
 		
 			* {
@@ -31,6 +33,18 @@
 				display: flex;
 				flex-direction: column;
 				min-height: 100vh;
+				overflow-x: hidden;
+			}
+			
+			.dflex-row{
+				display:flex;
+				flex-direction:row;
+			}
+			@media (max-width: 720px) {
+			  .dflex-row {
+				flex-direction: column;
+				flex-wrap: nowrap;
+			  }
 			}
 			
 			form{
@@ -54,6 +68,7 @@
 			}
 			.header-content{
 				margin:1rem;
+				flex-wrap: wrap;
 			}
 			.header-content > h1{
 				font-size: 2rem;
@@ -64,7 +79,6 @@
 			.page-body{
 				flex: 1;
 				display:block;
-				overflow: hidden;
 				background-color: var(--body-background);
 				color: var(--body-writing);
 			}
@@ -92,6 +106,10 @@
 				flex-direction:row;
 				justify-content: space-evenly;
 				gap: 1rem;
+				flex-wrap: wrap;
+			}
+			.early-access > p{
+				max-width: 65%;
 			}
 			
 			#devlog-entries {
@@ -139,10 +157,9 @@
 			}
 			.footer-content{
 				margin: 1rem;
-				display:flex;
-				flex-direction:row;
 				justify-content: space-evenly;
 				gap: 1rem;
+				/*flex-wrap: wrap;*/
 			}
 		</style>
 	</head>
@@ -252,7 +269,7 @@
 			
 		</div>
 		<footer>
-			<div class="footer-content">
+			<div class="footer-content dflex-row">
 				<div>
 					<form>
 						<span>Contact Us</span>
