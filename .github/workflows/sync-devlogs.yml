@@ -1,0 +1,45 @@
+name: Sync Devlogs
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Rewrite existing devlog HTML files too (true/false)"
+        required: false
+        default: "false"
+  schedule:
+    - cron: "17 3 * * *" # daily at 03:17 UTC (change if you want)
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Sync devlogs from API
+        env:
+          DEVLOG_API_BASE: ${{ secrets.DEVLOG_API_BASE }}
+          DEVLOG_API_KEY: ${{ secrets.DEVLOG_API_KEY }}
+          FORCE_REWRITE: ${{ inputs.force }}
+        run: node scripts/sync-devlogs.mjs
+
+      - name: Commit changes (if any)
+        run: |
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add devlog
+          git commit -m "sync devlogs"
+          git push
